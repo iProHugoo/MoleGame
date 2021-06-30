@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | Mole Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/ranking.js"></script>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <h1>Mole Game | Ranking</h1>
+                <!--Botões para a saída da tela de Ranking-->
+                <div id="backLogin">
+                    <button onclick="window.open('index.html', '_self')">
+                        Realizar Login
+                    </button>
+                </div>
+                <div id="backGame">
+                    <button onclick="window.open('game.html', '_self')">
+                        Voltar ao Jogo
+                    </button>
+                </div>
+                <br>
+                <!--Seleção de Ranking-->
+                <label for="rank">Selecione o Nível de Dificuldade:</label>
+                <div>
+                    <select id="rank">
+                        <option value="" selected></option>
+                        <option value="easy">Fácil</option>
+                        <option value="medium">Médio</option>
+                        <option value="hard">Difícil</option>
+                    </select>
+                </div>
+                <!--Tabela do Ranking-->
+                <div>
+                    <table></table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

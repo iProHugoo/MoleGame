@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mole Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="css/jAlertWifi.css">
+  <script src="js/jAlertWifi.js"></script>
+  <script src="js/game.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <div>
+        <h1>Mole Game</h1>
+      </div>
+      <!--Infos: Tempo, Pontuação Atualizada e Nome do Jogador-->
+      <div>
+        <p>Tempo: 00:<span id="chrono">00</span></p>
+        <p>Pontuação: <span id="score">0</span></p>
+        <p>Jogador: <span id="userLogado"></span></p>
+      </div>
+    </div>
+  </header>
+  <!--Quadro do Jogo-->
+  <main>
+    <section>
+      <div id="board"></div>
+    </section>
+  </main>
+  <!--Botões do Jogo e Seleção de Nível-->
+  <footer>
+    <div>
+      <div>
+        <select id="level" onchange="fillBoard()">
+          <option selected></option>
+          <option value="easy">Fácil</option>
+          <option value="medium">Médio</option>
+          <option value="hard">Difícil</option>
+        </select>
+        <label for="level">Selecione o Nível</label>
+      </div>
+      <div class="col-8 m-auto text-center">
+        <button id="btnPlay" disabled>Iniciar</button>
+        <button id="btnPause" disabled>Pausar</button>
+        <button id="btnStop" disabled>Parar</button>
+        <button id="btnExit">Sair</button>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
